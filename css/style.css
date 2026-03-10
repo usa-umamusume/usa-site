@@ -1,5 +1,129 @@
-body{
-font-family:sans-serif;
-max-width:1000px;
-margin:auto;
+/* =========================
+   全体設定
+========================= */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  margin: 0;
+  background-color: #f5f6f8;
+  color: #333;
+}
+
+/* 中央コンテナ */
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px 20px;
+  background: white;
+}
+
+
+/* =========================
+   見出し
+========================= */
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 40px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e2e2e2;
+}
+
+p {
+  line-height: 1.7;
+}
+
+
+/* =========================
+   LookerStudio埋め込み
+========================= */
+
+iframe {
+  width: 100%;
+  border: none;
+  margin-top: 10px;
+}
+
+
+/* =========================
+   リンクバナー
+========================= */
+
+.link-banners {
+  margin-top: 20px;
+}
+
+.link-banner {
+  display: block;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  background: #f0f3ff;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.link-banner:hover {
+  background: #e3e8ff;
+}
+
+
+/* =========================
+   RSS記事一覧
+========================= */
+
+#rss-feed {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+#rss-feed li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+#rss-feed a {
+  text-decoration: none;
+  color: #333;
+}
+
+#rss-feed a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   大会アーカイブ
+========================= */
+
+.archive-item {
+  padding: 15px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.archive-item h3 {
+  margin-top: 0;
+}
+
+
+/* =========================
+   フッター
+========================= */
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
 }
