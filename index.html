@@ -1,68 +1,108 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
-<title>USA大会</title>
-<meta charset="utf-8">
+<meta charset="UTF-8">
+<title>USA大会 - ウマ娘コミュニティ大会</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
+
 <body>
+
+<div class="container">
+
+<!-- =========================
+タイトル
+========================= -->
 
 <h1>USA大会</h1>
 
 <p>
-ウマ娘コミュニティ大会USAの公式サイトです。
+ウマ娘コミュニティによる非公式対戦大会です。<br>
+大会情報、ランキング、過去大会結果などを掲載しています。
 </p>
 
-<h2>現在開催中の大会</h2>
+
+<!-- =========================
+リンクバナー
+========================= -->
+
+<h2>大会情報</h2>
+
+<div class="link-banners">
+
+<a class="link-banner" href="about.html">
+① USA大会とは？
+</a>
+
+<a class="link-banner" href="https://discord.gg/6c9BdwJXB">
+② 大会Discordに参加
+</a>
+
+<a class="link-banner" href="ranking.html">
+③ 年間ランキング
+</a>
+
+<a class="link-banner" href="archive.html">
+④ 過去大会アーカイブ
+</a>
+
+</div>
+
+
+<!-- =========================
+LookerStudio
+========================= -->
+
+<h2>大会データ</h2>
+
+<p>
+大会データはLooker Studioで公開しています。
+</p>
 
 <iframe
 width="100%"
 height="600"
-src="LOOKER_STUDIO_URL">
+src="https://lookerstudio.google.com/embed/reporting/8bae756f-52ee-4057-b504-f9b59f6837e4/page/XAwCF"
+allowfullscreen>
 </iframe>
 
-<h2>リンク</h2>
 
-<ul>
-<li><a href="about.html">USAとは？</a></li>
-<li><a href="ranking.html">年間ランキング</a></li>
-<li><a href="archive.html">過去大会</a></li>
-</ul>
 
-<h2>最新記事</h2>
+<!-- =========================
+大会ニュース
+========================= -->
+
+<h2>大会ニュース</h2>
 
 <ul id="rss-feed"></ul>
 
-<script>
 
-const rssUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://note.com/herohero_3/rss";
 
-fetch(rssUrl)
-  .then(response => response.json())
-  .then(data => {
+<!-- =========================
+フッター
+========================= -->
 
-    const feed = document.getElementById("rss-feed");
+<footer>
 
-    data.items.slice(0,5).forEach(item => {
+<p>
+© 2026 USA Tournament
+</p>
 
-      const li = document.createElement("li");
+</footer>
 
-      li.innerHTML = `
-        <a href="${item.link}" target="_blank">
-          ${item.title}
-        </a>
-      `;
+</div>
 
-      feed.appendChild(li);
 
-    });
+<script src="js/rss.js"></script>
 
-  });
-
-</script>
-  
 </body>
 
-
 </html>
+```
