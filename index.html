@@ -30,6 +30,39 @@ src="LOOKER_STUDIO_URL">
 <li><a href="archive.html">過去大会</a></li>
 </ul>
 
+<h2>最新記事</h2>
+
+<ul id="rss-feed"></ul>
+
+<script>
+
+const rssUrl = "https://api.rss2json.com/v1/api.json?rss_url=https://note.com/herohero_3/rss";
+
+fetch(rssUrl)
+  .then(response => response.json())
+  .then(data => {
+
+    const feed = document.getElementById("rss-feed");
+
+    data.items.slice(0,5).forEach(item => {
+
+      const li = document.createElement("li");
+
+      li.innerHTML = `
+        <a href="${item.link}" target="_blank">
+          ${item.title}
+        </a>
+      `;
+
+      feed.appendChild(li);
+
+    });
+
+  });
+
+</script>
+  
 </body>
+
 
 </html>
